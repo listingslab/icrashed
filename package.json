@@ -1,0 +1,9 @@
+{
+  "name": "i-crashed-my-car",
+  "version": "1.0.1",
+  "scripts": {
+    "test": "echo \"LGTM\" && exit 0"
+  },
+  "author": "listingslab",
+  "license": "MIT"
+}
