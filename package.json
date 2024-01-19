@@ -2,6 +2,8 @@
   "name": "i-crashed-my-car",
   "version": "1.0.1",
   "scripts": {
+    "start": "clear && cd frontend && npm start",
+    "deploy": "clear && cd frontend && npm run build && firebase deploy",
     "test": "echo \"LGTM\" && exit 0"
   },
   "author": "listingslab",
