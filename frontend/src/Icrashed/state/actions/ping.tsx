@@ -23,6 +23,8 @@ export const ping = (): AppThunk => async (dispatch) => {
               message: r.data.message,
               data: r.data,
             }}))
+          } else {
+            dispatch(notifyNew("success", `Woohoo!`))
           }
         })
         .catch(function (e) {

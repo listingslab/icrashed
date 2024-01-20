@@ -39,11 +39,11 @@ export function Appshell() {
                 <Card>
                     <CardHeader 
                         avatar={<>
-                            <IconButton>
+                            <IconButton disabled>
                                 <Avatar
                                     sx={{
-                                        height: 65,
-                                        width: 65,
+                                        height: 60,
+                                        width: 60,
                                     }} 
                                     src="/iOS.svg" 
                                     alt={siteTitle}/>
@@ -56,7 +56,7 @@ export function Appshell() {
                                     {siteDescription}
                                 </Font>}
                     />
-                    <CardContent>
+                    <CardContent sx={{mx:2}}>
                         <Wizard />
                         {/* <pre>
                             {JSON.stringify(icrashed, null, 2)}

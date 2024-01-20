@@ -72,7 +72,7 @@ export default function Wizard() {
                     sx={{ mt: 1, mr: 1 }}
                   >
                     <Font>
-                      {index === wizardSteps.length - 1 ? 'Finish' : 'Next'}
+                      {index === wizardSteps.length - 1 ? 'Finish' : 'Next step'}
                     </Font>
                   </Button>
                   
