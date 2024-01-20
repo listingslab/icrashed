@@ -16,7 +16,7 @@ export function makeTheme(
       },
       background: {
         default: mode === 'light' ? primary : secondary,
-        // paper: mode === 'light' ? 'white' : secondary,
+        paper: mode === 'light' ? 'white' : secondary,
       },
     },
   }

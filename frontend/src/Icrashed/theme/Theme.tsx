@@ -1,14 +1,14 @@
 import React from 'react'
 import { config } from '../config'
-import { ThemeShape } from '../types'
+// import { ThemeShape } from '../types'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { makeTheme } from '../theme/makeTheme'
-
+// @ts-ignore
 export default function Theme({ children }) {
   const { theme, darkmode } = config
   // @ts-ignore
   const { primaryColor, secondaryColor } = theme
-  const thisTheme: ThemeShape = {
+  const thisTheme: any = {
     primaryColor,
     secondaryColor,
   }
