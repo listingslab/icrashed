@@ -11,6 +11,7 @@ import {
 import {
     Font,
     Wizard,
+    Notify,
     useIcrashedDispatch,
     useIcrashedSelect,
     ping,
@@ -33,6 +34,7 @@ export function Appshell() {
       }, [dispatch, icrashed])
 
   return (<>
+            <Notify />
             <Container maxWidth="sm">
                 <Card>
                     <CardHeader 
@@ -40,8 +42,8 @@ export function Appshell() {
                             <IconButton>
                                 <Avatar
                                     sx={{
-                                        height: 100,
-                                        width: 100,
+                                        height: 65,
+                                        width: 65,
                                     }} 
                                     src="/iOS.svg" 
                                     alt={siteTitle}/>
@@ -59,7 +61,6 @@ export function Appshell() {
                         {/* <pre>
                             {JSON.stringify(icrashed, null, 2)}
                         </pre> */}
-                        
                     </CardContent>
                 
                 </Card>

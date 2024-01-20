@@ -1,8 +1,8 @@
 // import {ConfigShape} from "./types"
 
 export const config: any = {
-    siteTitle: "I Crashed My Car",
-    siteDescription: "An example Goldlabel Project",
+    siteTitle: "Oh shit. I Crashed My Car",
+    siteDescription: "Not to worry. Just fill in this form",
     darkmode: true,
     theme: {
         primaryColor: "#ba1f2f",

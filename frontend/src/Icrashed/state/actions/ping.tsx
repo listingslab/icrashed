@@ -1,7 +1,7 @@
 import axios from "axios"
 import {store, AppThunk} from "../store"
 import { 
-  // notify,
+  notifyNew,
   setKey,
 } from "../../"
 
@@ -9,7 +9,6 @@ export const ping = (): AppThunk => async (dispatch) => {
   try {
     const {icrashed} = store.getState()
     const {pinging, pinged} = icrashed
-    
     if (!pinging && !pinged){
       dispatch(setKey({ key: 'pinging', value: true}))
       const ep = `${process.env.REACT_APP_2ND_API}icrashed/ping`
@@ -17,7 +16,6 @@ export const ping = (): AppThunk => async (dispatch) => {
         .then(function (response) {
           const r = response.data.response
           dispatch(setKey({ key: 'pingResponse', value: r}))
-
           const {code} = r
           if (code !== "200"){
             dispatch(setKey({ key: 'error', value: {
@@ -31,7 +29,9 @@ export const ping = (): AppThunk => async (dispatch) => {
           dispatch(setKey({ key: 'error', value: {
             severity: "error",
             message: `Ping error 101. Check API`,
-          }} ))
+          }}))
+          dispatch(notifyNew("error", `Ping error 101. Check API`,)
+          )
         })
         .finally(function () {
           dispatch(setKey({ key: 'pinging', value: false}))
@@ -39,7 +39,7 @@ export const ping = (): AppThunk => async (dispatch) => {
         })
     }
   } catch (error: any) {
-    // dispatch(notify("warning", "Failed to ping the API :("))
+    dispatch(notifyNew("warning", "Failed to ping the API :("))
   }
 }
 

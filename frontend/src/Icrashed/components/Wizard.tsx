@@ -3,13 +3,14 @@ import {
   Box,
   Paper,
   Button,
+  IconButton,
   StepContent,
   StepLabel,
   Step,
   Stepper,
 } from "@mui/material"
 import {
-  // Icon,
+  Icon,
   Font,
   useIcrashedSelect,
   selectIcrashed,
@@ -42,32 +43,37 @@ export default function Wizard() {
             <StepLabel
               optional={
                 index === 2 ? (
-                  <Font variant="caption">Last step</Font>
+                  <Font>Last step</Font>
                 ) : null
               }
             >
-              {step.label}
+              <Font variant="title">
+                {step.label}
+              </Font>
             </StepLabel>
             <StepContent>
-              <Font>{step.description}</Font>
+              <Font>
+                {step.description}
+              </Font>
               <Box sx={{ mb: 2 }}>
                 <div>
 
-                  <Button
+                  <IconButton
                     disabled={index === 0}
                     onClick={handleBack}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    Back
-                  </Button>
+                    <Icon icon="left" />
+                  </IconButton>
 
                   <Button
-                    color="secondary"
                     variant="contained"
                     onClick={handleNext}
                     sx={{ mt: 1, mr: 1 }}
                   >
-                    {index === wizardSteps.length - 1 ? 'Finish' : 'Continue'}
+                    <Font>
+                      {index === wizardSteps.length - 1 ? 'Finish' : 'Next'}
+                    </Font>
                   </Button>
                   
                 </div>
@@ -78,10 +84,14 @@ export default function Wizard() {
       </Stepper>
       {activeStep === wizardSteps.length && (
         <Paper square elevation={0} sx={{ p: 3 }}>
-          <Font>All steps completed - you&apos;re finished</Font>
-          <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
-            Reset
-          </Button>
+          <Font variant="title">
+            Thanks
+          </Font>
+          <IconButton
+            onClick={handleReset} 
+            sx={{ mt: 1, mr: 1 }}>
+            <Icon icon="reset" />
+          </IconButton>
         </Paper>
       )}
     </Box>
