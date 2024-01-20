@@ -1,5 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit"
 import {RootState} from "./store"
+import {wizardSteps} from "./wizardSteps"
 import {
   KeyValueShape,
 } from "../types"
@@ -8,6 +9,8 @@ const initialState: any = {
   error: null,
   pinging: false,
   pinged: false,
+  pingResponse: null,
+  wizardSteps,
 }
 
 export const slice = createSlice({

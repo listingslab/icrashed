@@ -1,21 +1,23 @@
 import axios from "axios"
 import {store, AppThunk} from "../store"
 import { 
-  notify,
+  // notify,
   setKey,
 } from "../../"
 
 export const ping = (): AppThunk => async (dispatch) => {
   try {
-    const {instrumental} = store.getState()
-    const {pinging, pinged} = instrumental
+    const {icrashed} = store.getState()
+    const {pinging, pinged} = icrashed
+    
     if (!pinging && !pinged){
       dispatch(setKey({ key: 'pinging', value: true}))
-      const baseUrl = "http://localhost:4000/"
-      const ep = `${baseUrl}ping`
+      const ep = `${process.env.REACT_APP_2ND_API}icrashed/ping`
       axios.get(ep)
         .then(function (response) {
           const r = response.data.response
+          dispatch(setKey({ key: 'pingResponse', value: r}))
+
           const {code} = r
           if (code !== "200"){
             dispatch(setKey({ key: 'error', value: {
@@ -37,7 +39,7 @@ export const ping = (): AppThunk => async (dispatch) => {
         })
     }
   } catch (error: any) {
-    dispatch(notify("warning", "Failed to ping the API :("))
+    // dispatch(notify("warning", "Failed to ping the API :("))
   }
 }
 
