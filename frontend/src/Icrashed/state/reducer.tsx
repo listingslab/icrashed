@@ -6,6 +6,8 @@ import {
 
 const initialState: any = {
   error: null,
+  pinging: false,
+  pinged: false,
 }
 
 export const slice = createSlice({

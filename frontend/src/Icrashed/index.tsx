@@ -1,6 +1,7 @@
 import {store} from "./state/store"
 import {useIcrashedSelect} from "./state/useIcrashedSelect"
 import {useIcrashedDispatch} from "./state/useIcrashedDispatch"
+import {ping} from "./state/actions/ping"
 import {
   Theme,
   Font,
@@ -16,4 +17,5 @@ export {
   Icon,
   useIcrashedSelect,
   useIcrashedDispatch,
+  ping,
 }
