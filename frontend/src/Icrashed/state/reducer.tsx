@@ -10,6 +10,7 @@ const initialState: any = {
   pinging: false,
   pinged: false,
   pingResponse: null,
+  notification: null,
   wizardSteps,
 }
 
