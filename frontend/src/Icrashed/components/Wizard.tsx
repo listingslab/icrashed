@@ -1,8 +1,6 @@
 import * as React from "react"
 import {
   Box,
-  Paper,
-  Button,
   IconButton,
   StepContent,
   StepLabel,

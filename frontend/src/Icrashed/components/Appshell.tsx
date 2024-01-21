@@ -2,7 +2,6 @@ import React from "react"
 import {config} from "../config"
 import {
     Container,
-    Card,
     CardHeader,
     CardContent,
     Avatar,
