@@ -1,6 +1,10 @@
 // https://translate.google.com/?sl=auto&tl=de&text=i%20crashed
 
-export const iCrashedLingua = {
+export const lingua = {
+    "TAGLINE": {
+        en: "Don't worry. Fill in this form",
+        de: "Mach dir keine Sorge. Füllen Sie dieses Formular aus",
+    },
     "CRASHED": {
         en: "Crashed",
         de: "Abgestürzt",

@@ -1,8 +1,5 @@
-// import {ConfigShape} from "./types"
-
 export const config: any = {
-    siteTitle: "I Crashed",
-    siteDescription: null,
+    defaultLocale: "de",
     theme: {
         darkmode: false,
         primaryColor: "#ba1f2f",

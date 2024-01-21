@@ -1,23 +1,10 @@
 export const wizard = [
     {
-      label: 'Where did it happen?',
-      description:
-        '',
+      label: 'Where?',
+      description: 'Please place an accurate marker on the map',
     },
-    // {
-    //   label: 'Was anyone injured?',
-    //   description: "",
-    // },
     {
-      label: 'When did it happen?',
-      description: "",
+      label: 'When?',
+      description: "Try to be as precise as you can",
     },
-    // {
-    //   label: 'What happened exactly?',
-    //   description: "",
-    // },
-    // {
-    //   label: 'What it your fault?',
-    //   description: "",
-    // },
   ]
