@@ -4,5 +4,13 @@ export const iCrashedLingua = {
     "CRASHED?": {
         en: "Crashed?",
         de: "Abgestürzt?",
-    }
+    },
+    "INJURIES": {
+        en: "?",
+        de: "?",
+    },
+    "WHEN": {
+        en: "?",
+        de: "?",
+    },
 }

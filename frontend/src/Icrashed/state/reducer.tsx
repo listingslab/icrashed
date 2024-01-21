@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit"
 import {RootState} from "./store"
-import {wizardSteps} from "./wizardSteps"
+import {wizardSteps} from "../wizardSteps"
 import {
   KeyValueShape,
 } from "../types"

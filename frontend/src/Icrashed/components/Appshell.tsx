@@ -8,6 +8,7 @@ import {
     IconButton,
 } from "@mui/material"
 import {
+    Icon,
     Font,
     Wizard,
     Notify,
@@ -57,6 +58,13 @@ export function Appshell() {
                         subheader={<Font>
                                     {siteDescription}
                                 </Font>}
+
+                        action={<IconButton
+                                    onClick={() => {
+                                        console.log("Lingua")
+                                    }}>
+                                    <Icon icon="lingua" />
+                                </IconButton>}
                     />
                     <CardContent sx={{mx:2}}>
                         <Wizard />

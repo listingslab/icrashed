@@ -5,9 +5,12 @@ export const wizardSteps = [
         '',
     },
     {
+      label: 'Was anyone injured?',
+      description: "",
+    },
+    {
       label: 'When did it happen?',
       description: "",
-  
     },
     {
       label: 'What happened exactly?',
