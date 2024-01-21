@@ -35,7 +35,7 @@ export function Appshell() {
 
   return (<>
             <Notify />
-            <Container maxWidth="sm">
+            <Container maxWidth="md">
                 {/* <Card> */}
                     <CardHeader 
                         avatar={<>

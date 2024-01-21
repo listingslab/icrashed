@@ -1,6 +1,7 @@
 import * as React from "react"
 import {
   Box,
+  Button,
   IconButton,
   StepContent,
   StepLabel,
@@ -18,7 +19,7 @@ import {
 export default function Wizard() {
   
   const icrashed = useIcrashedSelect(selectIcrashed)
-  const {wizardSteps} = icrashed
+  const {wizard} = icrashed
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -36,7 +37,7 @@ export default function Wizard() {
   return (
     <Box sx={{ maxWidth: 400 }}>
       <Stepper activeStep={activeStep} orientation="vertical">
-        {wizardSteps.map((step: any, index: number) => (
+        {wizard.map((step: any, index: number) => (
           <Step key={step.label}>
             <StepLabel>
               <Font variant="title">
@@ -71,16 +72,19 @@ export default function Wizard() {
           </Step>
         ))}
       </Stepper>
-      {activeStep === wizardSteps.length && (
+      {activeStep === wizard.length && (
           <>
             <Font variant="title">
               Thanks
             </Font>
-            <IconButton
+            <Button
+              variant="outlined"
               onClick={handleReset} 
               sx={{ mt: 1, mr: 1 }}>
-              <Icon icon="reset" />
-            </IconButton>
+                <Font>
+                  Reset?
+                </Font>
+            </Button>
           </>
       )}
     </Box>
