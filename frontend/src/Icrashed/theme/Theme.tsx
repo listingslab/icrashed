@@ -1,13 +1,12 @@
 import React from 'react'
 import { config } from '../config'
-// import { ThemeShape } from '../types'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { makeTheme } from '../theme/makeTheme'
 // @ts-ignore
 export default function Theme({ children }) {
-  const { theme, darkmode } = config
+  const { theme } = config
   // @ts-ignore
-  const { primaryColor, secondaryColor } = theme
+  const { primaryColor, secondaryColor, darkmode} = theme
   const thisTheme: any = {
     primaryColor,
     secondaryColor,
@@ -19,7 +18,9 @@ export default function Theme({ children }) {
   )
   return (
     <>
-      <ThemeProvider theme={createTheme(customTheme)}>{children}</ThemeProvider>
+      <ThemeProvider theme={createTheme(customTheme)}>
+        {children}
+      </ThemeProvider>
     </>
   )
 }

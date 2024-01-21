@@ -1,14 +1,13 @@
 import React from "react"
-import {config} from "../config"
 import {
     Container,
-    Card,
     CardHeader,
     CardContent,
     Avatar,
     IconButton,
 } from "@mui/material"
 import {
+    // Icon,
     Font,
     Wizard,
     Notify,
@@ -16,15 +15,17 @@ import {
     useIcrashedSelect,
     ping,
     selectIcrashed,
+    LocaleSelect,
 } from "../"
 
 export function Appshell() {
     const dispatch = useIcrashedDispatch()
     const icrashed = useIcrashedSelect(selectIcrashed)
-    const {
-        siteTitle,
-        siteDescription,
-    } = config
+    
+    const {locale, lingua} = icrashed
+    const title = lingua["ICRASHED"][locale]
+    const subheader  = lingua["TAGLINE"][locale]
+
     React.useEffect(() => {
         const {
           pinging,
@@ -35,36 +36,40 @@ export function Appshell() {
 
   return (<>
             <Notify />
-            <Container maxWidth="sm">
-                <Card>
+            <Container maxWidth="md">
                     <CardHeader 
                         avatar={<>
-                            <IconButton disabled>
+                            <IconButton
+                                onClick={() => {
+                                    console.log("Confirm reset")
+                                }}>
                                 <Avatar
                                     sx={{
-                                        height: 60,
-                                        width: 60,
+                                        height: 48,
+                                        width: 48,
                                     }} 
                                     src="/iOS.svg" 
-                                    alt={siteTitle}/>
+                                    alt={"title"}/>
                             </IconButton>
                         </>}
                         title={<Font variant="title">
-                                    {siteTitle}
+                                    {title}
                                 </Font>}
                         subheader={<Font>
-                                    {siteDescription}
+                                    {subheader}
                                 </Font>}
+                        action={<LocaleSelect />}
                     />
                     <CardContent sx={{mx:2}}>
                         <Wizard />
-                        {/* <pre>
-                            {JSON.stringify(icrashed, null, 2)}
-                        </pre> */}
                     </CardContent>
-                
-                </Card>
             </Container>
           </>
   )
 }
+
+/* 
+<pre>
+    {JSON.stringify(icrashed, null, 2)}
+</pre> 
+*/

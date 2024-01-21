@@ -7,4 +7,3 @@ This app on your phone will sort it out. Simples.
 1. `npx create-react-app frontend --template typescript`
 2. `npm run`
 3. `npm start`
-
