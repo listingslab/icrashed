@@ -36,14 +36,17 @@ export function Appshell() {
   return (<>
             <Notify />
             <Container maxWidth="sm">
-                <Card>
+                {/* <Card> */}
                     <CardHeader 
                         avatar={<>
-                            <IconButton disabled>
+                            <IconButton
+                                onClick={() => {
+                                    console.log("Confirm reset")
+                                }}>
                                 <Avatar
                                     sx={{
-                                        height: 60,
-                                        width: 60,
+                                        height: 48,
+                                        width: 48,
                                     }} 
                                     src="/iOS.svg" 
                                     alt={siteTitle}/>
@@ -63,7 +66,7 @@ export function Appshell() {
                         </pre> */}
                     </CardContent>
                 
-                </Card>
+                {/* </Card> */}
             </Container>
           </>
   )
