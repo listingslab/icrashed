@@ -1,6 +1,6 @@
 {
-  "short_name": "I Crashed My Car",
-  "name": "I Crashed My Car",
+  "short_name": "I Crashed",
+  "name": "I Crashed",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#ba1f2f",

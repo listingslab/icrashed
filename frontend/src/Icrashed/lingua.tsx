@@ -5,20 +5,24 @@ export const iCrashedLingua = {
         en: "Crashed",
         de: "Abgestürzt",
     },
+    "ICRASHED": {
+        en: "I Crashed",
+        de: "Ich hatte einen Unfall",
+    },
     "RESET": {
         en: "Start over?",
-        de: "?",
+        de: "Von vorn anfangen?",
     },
     "THANKS": {
         en: "Thank you",
-        de: "?",
+        de: "Danke",
     },
     "INJURIES": {
         en: "Was anybody injured?",
-        de: "?",
+        de: "Wurde jemand verletzt?",
     },
     "WHEN": {
         en: "When did it happen?",
-        de: "?",
+        de: "Wann ist es passiert?",
     },
 }
